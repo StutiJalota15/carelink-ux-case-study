@@ -1,3 +1,4 @@
 theme: minima
 title: CareLink — UX Case Study
-description: Healthcare Appointment Booking & Scheduling Platform
+description: Designing a healthcare appointment booking & scheduling system
+markdown: kramdown
