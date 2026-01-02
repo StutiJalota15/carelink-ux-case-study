@@ -1,4 +1,4 @@
-#🩺 CareLink
+🩺 CareLink
 Designing a Healthcare Appointment Booking & Scheduling System
 Role: UX/UI Designer
 Timeline: 4 weeks
@@ -6,7 +6,7 @@ Tools: Figma, User Research, User Flows, Wireframing, Prototyping
 
 
 
-#📌 Project Overview
+📌 Project Overview
 CareLink is a concept healthcare platform designed to simplify appointment booking for patients while enabling healthcare providers to manage schedules efficiently.
 The project focuses on solving real operational problems such as:
 Missed appointments and no-shows
