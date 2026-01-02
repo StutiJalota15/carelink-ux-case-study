@@ -50,7 +50,7 @@
             </div>
             <div class="meta-card">
               <div class="meta-label">Tools</div>
-              <div class="meta-value">Figma · Flows · Wireframes · Prototyping</div>
+              <div class="meta-value">Figma · User flows · Wireframes · Prototyping</div>
             </div>
             <div class="meta-card">
               <div class="meta-label">Scope</div>
@@ -64,8 +64,8 @@
           </div>
 
           <p class="note">
-            Note: This is a concept case study built to demonstrate systems thinking,
-            healthcare scheduling workflows, and end-to-end UX.
+            This is a concept case study built to show end-to-end UX thinking across two user types:
+            patients (confidence + simplicity) and admins (speed + control).
           </p>
         </div>
 
@@ -73,19 +73,19 @@
           <img
             class="hero-img"
             src="assets/images/cover.png"
-            alt="CareLink preview collage of patient app and admin dashboard"
+            alt="CareLink cover collage showing patient app and admin dashboard screens"
           />
           <div class="hero-caption">
-            Cover collage showing patient app + admin dashboard.
+            Cover collage from the final patient + admin UI.
           </div>
         </div>
       </div>
     </section>
 
-    <!-- TL;DR -->
+    <!-- QUICK SUMMARY -->
     <section class="section">
       <div class="section-head">
-        <h2>TL;DR</h2>
+        <h2>Quick summary</h2>
         <p class="lede">
           CareLink improves appointment booking clarity for patients and reduces scheduling overhead for admins
           through a shared availability model, fast rescheduling, and a dashboard designed for high-volume operations.
@@ -144,7 +144,7 @@
         <div class="card">
           <h3>Admin/clinic pain points</h3>
           <ul>
-            <li>Manual adjustments cause errors & double-bookings</li>
+            <li>Manual adjustments increase errors & double-bookings</li>
             <li>No quick way to spot conflicts in the schedule</li>
             <li>Reschedules cascade across providers and rooms</li>
             <li>High volume requires speed + clarity</li>
@@ -202,7 +202,7 @@
         </div>
         <div class="step">
           <div class="step-title">3) Wireframe to validate flow</div>
-          <div class="step-text">Low fidelity screens to validate structure before polish.</div>
+          <div class="step-text">Low-fidelity screens to validate structure before polish.</div>
         </div>
         <div class="step">
           <div class="step-title">4) High-fidelity UI + interactions</div>
@@ -214,19 +214,19 @@
         <div class="img-card">
           <div class="img-title">User flow diagram</div>
           <img
-            src="assets/flow-digrams/user-flow-diagram.png"
-            alt="User flow diagram for patient booking and management"
+            src="assets/flow-diagrams/user-flow-diagram.png"
+            alt="User flow diagram for the CareLink patient booking journey"
           />
-          <div class="img-caption">Patient flow from sign-in → booking → confirmation → managing appointments.</div>
+          <div class="img-caption">Patient journey from sign-in to managing appointments.</div>
         </div>
 
         <div class="img-card">
           <div class="img-title">System flow diagram</div>
           <img
-            src="assets/flow-digrams/system-flow.png"
-            alt="System flow showing patient app, admin dashboard, scheduling engine, and notifications"
+            src="assets/flow-diagrams/system-flow.png"
+            alt="System flow diagram showing patient app, admin dashboard, scheduling, and notifications"
           />
-          <div class="img-caption">Shared availability + scheduling engine powering both patient and admin workflows.</div>
+          <div class="img-caption">How patient actions and admin actions connect through a shared scheduling system.</div>
         </div>
       </div>
     </section>
@@ -245,7 +245,7 @@
           <h3>Patient experience</h3>
           <ul>
             <li><strong>Clear availability</strong> by provider, date, and time slot</li>
-            <li><strong>Low-friction booking</strong> with strong confirmation state</li>
+            <li><strong>Low-friction booking</strong> with a strong confirmation state</li>
             <li><strong>Reschedule/cancel</strong> flows designed to reduce anxiety</li>
             <li><strong>Contextual details</strong> (location, visit type, prep notes)</li>
           </ul>
@@ -265,14 +265,25 @@
       <div class="grid-2">
         <div class="img-card">
           <div class="img-title">Patient app — key screens</div>
-          <img src="assets/images/app-home.png" alt="Patient app UI — Home screen" />
-          <div class="img-caption">Example key screen: Home (quick actions + upcoming appointment).</div>
+
+          <!-- Simple gallery (works even if your CSS doesn't style it yet) -->
+          <div class="img-caption">Core booking + management screens.</div>
+
+          <img src="assets/images/login:signup.png" alt="Patient app sign-in screen with Google and email options" />
+          <img src="assets/images/app-home.png" alt="Patient app home screen with quick actions and upcoming appointment" />
+          <img src="assets/images/app-choose-services.png" alt="Choose service screen showing service list and pricing" />
+          <img src="assets/images/app-doctor-selection.png" alt="Doctor selection screen listing providers and availability" />
+          <img src="assets/images/app-appointment-confirmed.png" alt="Appointment confirmed screen with confirmation details and add to calendar" />
+          <img src="assets/images/app-my-appointments.png" alt="My appointments screen showing upcoming and past appointments with reschedule/cancel" />
         </div>
 
         <div class="img-card">
           <div class="img-title">Admin dashboard — key screens</div>
-          <img src="assets/dashboard/admin-daily-schedule.png" alt="Admin dashboard — daily schedule view" />
-          <div class="img-caption">Example key screen: Daily schedule (filters + appointments + status).</div>
+          <div class="img-caption">Daily schedule, appointment details, and reschedule requests.</div>
+
+          <img src="assets/dashboard/admin-daily-schedule.png" alt="Admin daily schedule dashboard showing appointments and status summary" />
+          <img src="assets/dashboard/admin-appointment-drawer.png" alt="Appointment details drawer overlay with notes and actions" />
+          <img src="assets/dashboard/admin-reschedule-request.png" alt="Reschedule requests page with approve/decline actions" />
         </div>
       </div>
     </section>
