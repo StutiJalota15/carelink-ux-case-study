@@ -1,0 +1,366 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>CareLink — UX Case Study</title>
+  <meta name="description" content="CareLink UX Case Study — Healthcare appointment booking & scheduling system (Patient app + Admin dashboard)" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <a class="skip" href="#content">Skip to content</a>
+
+  <!-- Top nav -->
+  <header class="nav">
+    <div class="nav-inner">
+      <div class="brand">Stuti Jalota</div>
+      <nav class="nav-links">
+        <a href="#overview">Overview</a>
+        <a href="#problem">Problem</a>
+        <a href="#process">Process</a>
+        <a href="#solution">Solution</a>
+        <a href="#outcomes">Outcomes</a>
+        <a class="pill" href="#links">Links</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="content" class="page">
+
+    <!-- HERO -->
+    <section class="hero" id="overview">
+      <div class="hero-grid">
+        <div class="hero-copy">
+          <div class="kicker">UX Case Study</div>
+          <h1>CareLink</h1>
+          <p class="subtitle">
+            Designing a calm, reliable healthcare appointment booking experience
+            and an admin scheduling dashboard that reduces operational friction.
+          </p>
+
+          <div class="meta">
+            <div class="meta-card">
+              <div class="meta-label">Role</div>
+              <div class="meta-value">UX/UI Designer</div>
+            </div>
+            <div class="meta-card">
+              <div class="meta-label">Platforms</div>
+              <div class="meta-value">Patient App + Admin Dashboard</div>
+            </div>
+            <div class="meta-card">
+              <div class="meta-label">Tools</div>
+              <div class="meta-value">Figma · Flows · Wireframes · Prototyping</div>
+            </div>
+            <div class="meta-card">
+              <div class="meta-label">Scope</div>
+              <div class="meta-value">Concept project (portfolio)</div>
+            </div>
+          </div>
+
+          <div class="cta-row">
+            <a class="btn primary" href="#solution">View solution</a>
+            <a class="btn ghost" href="#links">Open prototype</a>
+          </div>
+
+          <p class="note">
+            Note: This is a concept case study built to demonstrate systems thinking,
+            healthcare scheduling workflows, and end-to-end UX.
+          </p>
+        </div>
+
+        <div class="hero-visual">
+          <!-- Replace this image -->
+          <img
+            class="hero-img"
+            src="assets/images/cover.png"
+            alt="CareLink preview collage of patient app and admin dashboard"
+          />
+          <div class="hero-caption">
+            Suggested: one collage image showing 2–3 patient screens + 1 admin screen.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TL;DR -->
+    <section class="section">
+      <div class="section-head">
+        <h2>TL;DR</h2>
+        <p class="lede">
+          CareLink improves appointment booking clarity for patients and reduces scheduling overhead for admins
+          through a shared availability model, fast rescheduling, and a dashboard designed for high-volume operations.
+        </p>
+      </div>
+
+      <div class="grid-3">
+        <div class="card">
+          <h3>What I designed</h3>
+          <ul>
+            <li>Patient booking flow: search → select → confirm</li>
+            <li>Reschedule/cancel experience with clear policies</li>
+            <li>Admin schedule dashboard with conflict visibility</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>What I optimized for</h3>
+          <ul>
+            <li>Low cognitive load, high trust (healthcare context)</li>
+            <li>Operational speed (fewer clicks for staff)</li>
+            <li>Scalability (multiple providers, locations)</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Key artifacts</h3>
+          <ul>
+            <li>User flow + system flow diagrams</li>
+            <li>Wireframes → high-fidelity UI</li>
+            <li>Component patterns + accessibility notes</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROBLEM -->
+    <section class="section" id="problem">
+      <div class="section-head">
+        <h2>Problem</h2>
+        <p class="lede">
+          Scheduling is where patient experience and clinic operations collide.
+          Small breakdowns create missed appointments, staff frustration, and reduced care access.
+        </p>
+      </div>
+
+      <div class="grid-2">
+        <div class="card">
+          <h3>Patient pain points</h3>
+          <ul>
+            <li>Unclear availability (what’s actually bookable?)</li>
+            <li>Too many steps to confirm an appointment</li>
+            <li>Rescheduling is stressful and time-consuming</li>
+            <li>Uncertainty after booking (did it work?)</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h3>Admin/clinic pain points</h3>
+          <ul>
+            <li>Manual adjustments cause errors & double-bookings</li>
+            <li>No quick way to spot conflicts in the schedule</li>
+            <li>Reschedules cascade across providers and rooms</li>
+            <li>High volume requires speed + clarity</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="callout">
+        <strong>Design challenge:</strong> build one system that supports two very different user modes:
+        <em>patients (confidence + simplicity)</em> and <em>admins (speed + control)</em>.
+      </div>
+    </section>
+
+    <!-- SUCCESS METRICS -->
+    <section class="section">
+      <div class="section-head">
+        <h2>Success metrics (what “good” looks like)</h2>
+        <p class="lede">Even for a concept project, I designed with measurable outcomes in mind.</p>
+      </div>
+
+      <div class="grid-3">
+        <div class="card metric">
+          <div class="metric-num">↓ Steps</div>
+          <div class="metric-text">Reduce steps to book from landing → confirmation</div>
+          <div class="metric-foot">Target: 3–5 steps</div>
+        </div>
+        <div class="card metric">
+          <div class="metric-num">↓ Admin time</div>
+          <div class="metric-text">Shorten rescheduling time for staff</div>
+          <div class="metric-foot">Target: &lt; 60s for common reschedules</div>
+        </div>
+        <div class="card metric">
+          <div class="metric-num">↑ Confidence</div>
+          <div class="metric-text">Increase clarity of availability & booking status</div>
+          <div class="metric-foot">Target: fewer “did it book?” moments</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROCESS -->
+    <section class="section" id="process">
+      <div class="section-head">
+        <h2>Process</h2>
+        <p class="lede">I mapped the workflows first, then designed UI that makes complex scheduling feel simple.</p>
+      </div>
+
+      <div class="timeline">
+        <div class="step">
+          <div class="step-title">1) Map workflows</div>
+          <div class="step-text">Patient booking + admin scheduling/rescheduling paths, including edge cases.</div>
+        </div>
+        <div class="step">
+          <div class="step-title">2) Define information hierarchy</div>
+          <div class="step-text">What must be seen first to make a decision? Availability, location, provider, time.</div>
+        </div>
+        <div class="step">
+          <div class="step-title">3) Wireframe to validate flow</div>
+          <div class="step-text">Low fidelity screens to validate structure before polish.</div>
+        </div>
+        <div class="step">
+          <div class="step-title">4) High-fidelity UI + interactions</div>
+          <div class="step-text">Calm visual design, component patterns, and consistent states.</div>
+        </div>
+      </div>
+
+      <div class="grid-2">
+        <div class="img-card">
+          <div class="img-title">User flow diagram</div>
+          <img src="assets/diagrams/user-flow.png" alt="User flow diagram for patient booking and management" />
+          <div class="img-caption">Replace with exported diagram image.</div>
+        </div>
+
+        <div class="img-card">
+          <div class="img-title">System flow diagram</div>
+          <img src="assets/diagrams/system-flow.png" alt="System flow showing patient app, admin dashboard, scheduling engine, and notifications" />
+          <div class="img-caption">Replace with exported diagram image.</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SOLUTION -->
+    <section class="section" id="solution">
+      <div class="section-head">
+        <h2>Solution</h2>
+        <p class="lede">
+          A unified scheduling model across patient and admin surfaces — optimized for trust, clarity, and speed.
+        </p>
+      </div>
+
+      <div class="grid-2">
+        <div class="card">
+          <h3>Patient experience</h3>
+          <ul>
+            <li><strong>Clear availability</strong> by provider, date, and time slot</li>
+            <li><strong>Low-friction booking</strong> with strong confirmation state</li>
+            <li><strong>Reschedule/cancel</strong> flows designed to reduce anxiety</li>
+            <li><strong>Contextual details</strong> (location, visit type, prep notes)</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h3>Admin dashboard</h3>
+          <ul>
+            <li><strong>Schedule overview</strong> for the day/week</li>
+            <li><strong>Conflict awareness</strong> (double-book risk, timing overlap)</li>
+            <li><strong>Fast rescheduling</strong> with minimal clicks</li>
+            <li><strong>Status states</strong>: confirmed, pending, cancelled, no-show</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="grid-2">
+        <div class="img-card">
+          <div class="img-title">Patient app — key screens</div>
+          <img src="assets/images/app-ui.png" alt="Patient app UI screens collage" />
+          <div class="img-caption">Suggested: booking selection + confirmation + manage appointment.</div>
+        </div>
+
+        <div class="img-card">
+          <div class="img-title">Admin dashboard — key screens</div>
+          <img src="assets/images/dashboard-ui.png" alt="Admin dashboard UI screens collage" />
+          <div class="img-caption">Suggested: schedule view + appointment details drawer + reschedule modal.</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- DESIGN SYSTEM -->
+    <section class="section">
+      <div class="section-head">
+        <h2>Design decisions</h2>
+        <p class="lede">Healthcare UX needs calm clarity and strong state communication.</p>
+      </div>
+
+      <div class="grid-3">
+        <div class="card">
+          <h3>Calm visual language</h3>
+          <p>Soft contrast, generous spacing, and readable typography reduce cognitive load.</p>
+        </div>
+        <div class="card">
+          <h3>Progressive disclosure</h3>
+          <p>Users see essentials first, details only when needed — fewer “walls of info.”</p>
+        </div>
+        <div class="card">
+          <h3>State-driven components</h3>
+          <p>Clear system states for booking/rescheduling prevent uncertainty and errors.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- OUTCOMES -->
+    <section class="section" id="outcomes">
+      <div class="section-head">
+        <h2>Outcomes & what I’d test next</h2>
+        <p class="lede">If this shipped, I would validate flow efficiency and admin speed with usability testing.</p>
+      </div>
+
+      <div class="grid-2">
+        <div class="card">
+          <h3>What’s strong</h3>
+          <ul>
+            <li>Clear patient booking path with strong confirmation</li>
+            <li>Admin experience optimized for high-volume operations</li>
+            <li>System supports scheduling edge cases</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Next experiments</h3>
+          <ul>
+            <li>Usability testing: booking time + error rate</li>
+            <li>A/B: time slot layout for faster selection</li>
+            <li>Admin: reschedule flow completion time</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="callout">
+        <strong>Portfolio takeaway:</strong> CareLink demonstrates systems-thinking UX — designing across two surfaces
+        (patient + admin) while keeping a single source of truth for availability.
+      </div>
+    </section>
+
+    <!-- LINKS -->
+    <section class="section" id="links">
+      <div class="section-head">
+        <h2>Links</h2>
+        <p class="lede">Add your real links here.</p>
+      </div>
+
+      <div class="grid-2">
+        <a class="link-card" href="#" target="_blank" rel="noreferrer">
+          <div class="link-title">Figma Design File</div>
+          <div class="link-sub">Replace # with your link</div>
+        </a>
+        <a class="link-card" href="#" target="_blank" rel="noreferrer">
+          <div class="link-title">Prototype</div>
+          <div class="link-sub">Replace # with your link</div>
+        </a>
+        <a class="link-card" href="#" target="_blank" rel="noreferrer">
+          <div class="link-title">Portfolio</div>
+          <div class="link-sub">Replace # with your link</div>
+        </a>
+        <a class="link-card" href="#" target="_blank" rel="noreferrer">
+          <div class="link-title">Contact</div>
+          <div class="link-sub">LinkedIn or Email</div>
+        </a>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div>© <span id="year"></span> Stuti Jalota · CareLink UX Case Study</div>
+    </footer>
+  </main>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
