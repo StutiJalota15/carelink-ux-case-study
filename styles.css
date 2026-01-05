@@ -438,3 +438,54 @@ h1{
   /* iOS sometimes hates fixed backgrounds */
   body{ background-attachment: scroll; }
 }
+
+/* === FORCE Patient swipe gallery to work (place at bottom of styles.css) === */
+#patientSwipe {
+  overflow-x: auto !important;
+  overflow-y: hidden !important;
+  display: flex !important;
+  gap: 14px !important;
+  scroll-snap-type: x mandatory !important;
+  -webkit-overflow-scrolling: touch !important;
+  touch-action: pan-x !important;
+  padding: 10px !important;
+  border-radius: 16px !important;
+}
+
+#patientSwipe .swipe-slide {
+  flex: 0 0 100% !important;         /* 1 full slide per view */
+  scroll-snap-align: start !important;
+  border-radius: 14px !important;
+  overflow: hidden !important;
+  background: rgba(0,0,0,0.08) !important;
+  min-height: 520px !important;
+  position: relative !important;
+}
+
+#patientSwipe .slide-frame {
+  height: 100% !important;
+  display: grid !important;
+  place-items: center !important;
+  padding: 8px !important;
+}
+
+#patientSwipe .slide-frame img {
+  max-height: 560px !important;
+  width: auto !important;
+  max-width: 100% !important;
+  height: auto !important;
+  object-fit: contain !important;
+  display: block !important;
+}
+
+/* If any parent is blocking horizontal scroll, force it */
+.img-card {
+  overflow: visible !important;
+}
+
+/* Prevent global image rules from breaking the slider layout */
+.img-card img {
+  max-width: 100%;
+  height: auto;
+}
+
