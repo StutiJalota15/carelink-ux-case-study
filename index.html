@@ -11,7 +11,6 @@
 <body>
   <a class="skip" href="#content">Skip to content</a>
 
-  <!-- Top nav -->
   <header class="nav">
     <div class="nav-inner">
       <div class="brand">Stuti Jalota</div>
@@ -81,8 +80,8 @@
       <div class="section-head">
         <h2>Problem</h2>
         <p class="lede">
-          Scheduling is where patient experience and clinic operations collide. Small breakdowns create missed appointments,
-          staff frustration, and reduced access to care.
+          Scheduling is where patient experience and clinic operations collide.
+          Small breakdowns create missed appointments, staff frustration, and reduced care access.
         </p>
       </div>
 
@@ -144,7 +143,8 @@
       </div>
 
       <div class="grid-2">
-        <!-- Patient App -->
+
+        <!-- Patient swipe gallery -->
         <div class="img-card swipe-card">
           <div class="img-title">Patient app — key screens</div>
 
@@ -192,27 +192,38 @@
             </div>
           </div>
 
+          <div class="swipe-dots" id="patientDots" aria-hidden="true">
+            <span class="dot is-active"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+          </div>
+
           <div class="swipe-hint">Swipe left/right to browse the patient flow screens.</div>
         </div>
 
-        <!-- Admin Dashboard -->
+        <!-- Admin stacked images -->
         <div class="img-card">
           <div class="img-title">Admin dashboard — key screens</div>
 
-          <figure class="shot">
-            <div class="shot-label">01 — Daily schedule</div>
-            <img src="./assets/dashboard/admin-daily-schedule.png" alt="Admin dashboard daily schedule view" loading="lazy" />
-          </figure>
+          <div class="stacked-media">
+            <figure class="shot">
+              <div class="shot-label">01 — Daily schedule</div>
+              <img src="./assets/dashboard/admin-daily-schedule.png" alt="Admin dashboard daily schedule view" loading="lazy" />
+            </figure>
 
-          <figure class="shot">
-            <div class="shot-label">02 — Appointment drawer</div>
-            <img src="./assets/dashboard/admin-appointment-drawer.png" alt="Admin appointment drawer view" loading="lazy" />
-          </figure>
+            <figure class="shot">
+              <div class="shot-label">02 — Appointment drawer</div>
+              <img src="./assets/dashboard/admin-appointment-drawer.png" alt="Admin appointment drawer view" loading="lazy" />
+            </figure>
 
-          <figure class="shot">
-            <div class="shot-label">03 — Reschedule requests</div>
-            <img src="./assets/dashboard/admin-reschedule-request.png" alt="Admin reschedule requests view" loading="lazy" />
-          </figure>
+            <figure class="shot">
+              <div class="shot-label">03 — Reschedule requests</div>
+              <img src="./assets/dashboard/admin-reschedule-request.png" alt="Admin reschedule requests view" loading="lazy" />
+            </figure>
+          </div>
         </div>
       </div>
     </section>
@@ -242,18 +253,13 @@
           </ul>
         </div>
       </div>
-
-      <div class="callout">
-        <strong>Portfolio takeaway:</strong> CareLink demonstrates systems-thinking UX across two surfaces
-        (patient + admin) while keeping a single source of truth for availability.
-      </div>
     </section>
 
     <!-- LINKS -->
     <section class="section" id="links">
       <div class="section-head">
         <h2>Links</h2>
-        <p class="lede">Add your real links here.</p>
+        <p class="lede">Replace these with your real links.</p>
       </div>
 
       <div class="grid-2">
@@ -261,17 +267,14 @@
           <div class="link-title">Figma Design File</div>
           <div class="link-sub">Replace # with your link</div>
         </a>
-
         <a class="link-card" href="#" target="_blank" rel="noreferrer">
           <div class="link-title">Prototype</div>
           <div class="link-sub">Replace # with your link</div>
         </a>
-
         <a class="link-card" href="#" target="_blank" rel="noreferrer">
           <div class="link-title">Portfolio</div>
           <div class="link-sub">Replace # with your link</div>
         </a>
-
         <a class="link-card" href="#" target="_blank" rel="noreferrer">
           <div class="link-title">Contact</div>
           <div class="link-sub">LinkedIn or Email</div>
@@ -280,12 +283,51 @@
     </section>
 
     <footer class="footer">
-      © <span id="year"></span> Stuti Jalota · CareLink UX Case Study
+      <div>© <span id="year"></span> Stuti Jalota · CareLink UX Case Study</div>
     </footer>
   </main>
 
   <script>
     document.getElementById("year").textContent = new Date().getFullYear();
+
+    (function () {
+      const viewport = document.getElementById("patientSwipe");
+      const dotsWrap = document.getElementById("patientDots");
+      if (!viewport || !dotsWrap) return;
+
+      const dots = Array.from(dotsWrap.querySelectorAll(".dot"));
+      const slides = Array.from(viewport.querySelectorAll(".swipe-slide"));
+      const gap = 14;
+
+      function setActiveDot(index) {
+        dots.forEach((d, i) => d.classList.toggle("is-active", i === index));
+      }
+
+      function getIndex() {
+        const slideW = slides[0]?.getBoundingClientRect().width || viewport.clientWidth;
+        const idx = Math.round(viewport.scrollLeft / (slideW + gap));
+        return Math.max(0, Math.min(slides.length - 1, idx));
+      }
+
+      let ticking = false;
+      viewport.addEventListener("scroll", () => {
+        if (ticking) return;
+        ticking = true;
+        requestAnimationFrame(() => {
+          setActiveDot(getIndex());
+          ticking = false;
+        });
+      });
+
+      dots.forEach((dot, i) => {
+        dot.style.cursor = "pointer";
+        dot.addEventListener("click", () => {
+          const slide = slides[i];
+          if (!slide) return;
+          viewport.scrollTo({ left: slide.offsetLeft - viewport.offsetLeft, behavior: "smooth" });
+        });
+      });
+    })();
   </script>
 </body>
 </html>
