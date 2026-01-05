@@ -124,6 +124,14 @@ img{ max-width:100%; display:block; }
   align-items: start;
 }
 
+/* ✅ missing in your CSS but used in HTML */
+.hero-copy{
+  display:flex;
+  flex-direction:column;
+  gap: 0;
+  min-width: 0;
+}
+
 .kicker{
   display:inline-block;
   font-size: 12px;
@@ -134,6 +142,7 @@ img{ max-width:100%; display:block; }
   border: 1px solid rgba(255,255,255,.55);
   padding: 8px 10px;
   border-radius: 999px;
+  width: fit-content;
 }
 
 h1{
@@ -188,6 +197,13 @@ h1{
   transition: transform .2s ease, background .2s ease;
 }
 .btn.primary{ background: rgba(255,255,255,.52); border-color: rgba(255,255,255,.70); }
+
+/* ✅ ghost button style (your HTML uses btn ghost) */
+.btn.ghost{
+  background: rgba(255,255,255,.20);
+  border-color: rgba(255,255,255,.52);
+}
+
 .btn:hover{ transform: translateY(-1px); }
 .btn:active{ transform: translateY(0px); }
 
@@ -256,10 +272,6 @@ h1{
 .card p{ margin:0; color: var(--muted); line-height: 1.6; }
 .card ul{ margin: 10px 0 0; padding-left: 18px; color: var(--muted); line-height: 1.7; }
 
-.metric .metric-num{ font-size: 18px; font-weight: 750; letter-spacing: -0.01em; }
-.metric .metric-text{ margin-top: 8px; color: var(--muted); line-height:1.6; }
-.metric .metric-foot{ margin-top: 10px; color: rgba(20,22,26,.62); font-size: 12px; }
-
 .callout{
   margin-top: 16px;
   padding: 14px 16px;
@@ -270,20 +282,6 @@ h1{
   -webkit-backdrop-filter: blur(16px);
   color: rgba(20,22,26,.84);
 }
-
-/* TIMELINE */
-.timeline{ margin-top: 16px; display:grid; gap: 10px; }
-
-.step{
-  background: rgba(255,255,255,.28);
-  border: 1px solid rgba(255,255,255,.58);
-  border-radius: var(--radius);
-  padding: 14px 16px;
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
-}
-.step-title{ font-weight: 700; color: rgba(20,22,26,.92); }
-.step-text{ margin-top: 6px; color: var(--muted); line-height:1.6; }
 
 /* IMAGE CARDS */
 .img-card{
@@ -302,6 +300,15 @@ h1{
   width: 100%;
   border-radius: 14px;
   border: 1px solid rgba(255,255,255,.55);
+}
+
+/* ✅ make diagrams look nice and not huge */
+.media-img{
+  width: 100%;
+  height: auto;
+  max-height: 520px;
+  object-fit: contain;
+  background: rgba(255,255,255,.12);
 }
 
 .img-caption{ margin-top: 10px; font-size: 12px; color: rgba(20,22,26,.62); }
@@ -341,7 +348,6 @@ h1{
   gap: 10px;
 }
 
-/* The viewport should NOT be forced to 640px on small screens */
 .swipe-viewport{
   width: 100%;
   border-radius: 16px;
@@ -354,8 +360,6 @@ h1{
   padding: 10px;
   background: rgba(0,0,0,0.10);
   touch-action: pan-x;
-
-  /* fills the card nicely without being too tall */
   min-height: 560px;
 }
 
@@ -390,33 +394,16 @@ h1{
   padding: 8px;
 }
 
-/* ✅ MAIN FIX: make the app UI cover the whole card */
+/* Covers the card (cropping is expected). If you want full image, switch to contain. */
 .slide-frame img{
   width: 100%;
   height: 100%;
-  object-fit: cover;          /* changed from contain -> cover */
-  object-position: center;    /* keep centered */
+  object-fit: cover;
+  object-position: center;
   border-radius: 12px;
   border: 1px solid rgba(255,255,255,.45);
   background: rgba(255,255,255,.08);
 }
-
-/* dots (if you’re using them) */
-.swipe-dots{
-  display:flex;
-  gap: 8px;
-  justify-content:center;
-  align-items:center;
-  margin-top: 2px;
-}
-
-.dot{
-  width: 8px;
-  height: 8px;
-  border-radius: 999px;
-  background: rgba(0,0,0,0.18);
-}
-.dot.is-active{ background: rgba(0,0,0,0.45); }
 
 .swipe-hint{
   font-size: 0.95rem;
@@ -424,16 +411,12 @@ h1{
 }
 
 /* =========================
-   Admin stacked images + labels
+   Admin images + labels
    ========================= */
-.stacked-media{
-  display:grid;
-  gap: 14px;
-}
+.stacked-media{ display:grid; gap: 14px; }
 
 .shot{
   margin: 0;
-  position: relative;
 }
 
 .shot-label{
@@ -454,7 +437,8 @@ h1{
   .grid-2{ grid-template-columns: 1fr; }
   body{ background-attachment: scroll; }
 
-  /* reduce swipe height on phones so it doesn’t feel “too tall” */
   .swipe-viewport{ min-height: 460px; }
   .swipe-slide{ min-height: 440px; }
+
+  .media-img{ max-height: 420px; }
 }
