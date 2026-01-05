@@ -20,7 +20,7 @@
         <a href="#process">Process</a>
         <a href="#solution">Solution</a>
         <a href="#outcomes">Outcomes</a>
-      <!--  <a class="pill" href="#links">Links</a> -->
+        <!-- ✅ removed Links tab from navbar -->
       </nav>
     </div>
   </header>
@@ -59,7 +59,11 @@
 
           <div class="cta-row">
             <a class="btn primary" href="#solution">View solution</a>
-            <a class="btn ghost" href="#links">Open prototype</a>
+            <!-- ✅ keep button but stop linking to removed section -->
+            <a class="btn ghost" href="#" target="_blank" rel="noreferrer">
+              Open prototype
+            </a>
+            <!-- Replace # above with your real prototype URL (Figma prototype link) -->
           </div>
 
           <p class="note">
@@ -71,6 +75,74 @@
         <div class="hero-visual">
           <img class="hero-img" src="./assets/images/cover.png" alt="CareLink preview collage of patient app and admin dashboard" />
           <div class="hero-caption">Cover collage: patient booking journey + one admin schedule view.</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ✅ AT A GLANCE -->
+    <section class="section" id="at-a-glance">
+      <div class="section-head">
+        <h2>At a glance</h2>
+        <p class="lede">
+          CareLink reduces booking uncertainty for patients and speeds up scheduling work for admins
+          using a shared availability model, clear confirmation states, and fast rescheduling tools.
+        </p>
+      </div>
+
+      <div class="grid-3">
+        <div class="card">
+          <h3>Users</h3>
+          <ul>
+            <li>Patients booking & managing appointments</li>
+            <li>Clinic admins managing schedules & requests</li>
+            <li>Providers as part of availability constraints</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h3>What I designed</h3>
+          <ul>
+            <li>Patient booking: sign in → pick service → pick doctor → confirm</li>
+            <li>Strong confirmation + manage appointments</li>
+            <li>Admin: daily schedule + drawer + reschedule requests</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h3>Deliverables</h3>
+          <ul>
+            <li>User flow + system flow diagrams</li>
+            <li>Wireframes → high-fidelity UI</li>
+            <li>Component patterns + states</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ✅ SUCCESS METRICS -->
+    <section class="section" id="metrics">
+      <div class="section-head">
+        <h2>Success metrics</h2>
+        <p class="lede">Designed with measurable outcomes in mind (targets for a real launch).</p>
+      </div>
+
+      <div class="grid-3">
+        <div class="card metric">
+          <div class="metric-num">↓ Steps</div>
+          <div class="metric-text">Reduce steps to book from start → confirmation</div>
+          <div class="metric-foot">Target: 3–5 screens</div>
+        </div>
+
+        <div class="card metric">
+          <div class="metric-num">↓ Admin time</div>
+          <div class="metric-text">Shorten common reschedules for staff</div>
+          <div class="metric-foot">Target: under 60 seconds</div>
+        </div>
+
+        <div class="card metric">
+          <div class="metric-num">↑ Confidence</div>
+          <div class="metric-text">Improve clarity of booking status & availability</div>
+          <div class="metric-foot">Target: fewer “did it book?” moments</div>
         </div>
       </div>
     </section>
@@ -110,6 +182,35 @@
       <div class="callout">
         <strong>Design challenge:</strong> One system supporting two user modes:
         <em>patients (confidence + simplicity)</em> and <em>admins (speed + control)</em>.
+      </div>
+    </section>
+
+    <!-- ✅ CONSTRAINTS / EDGE CASES -->
+    <section class="section" id="constraints">
+      <div class="section-head">
+        <h2>Constraints & edge cases</h2>
+        <p class="lede">Healthcare scheduling is full of exceptions — the UI needs to communicate states clearly.</p>
+      </div>
+
+      <div class="grid-2">
+        <div class="card">
+          <h3>Patient-side edge cases</h3>
+          <ul>
+            <li>Cancellation + rescheduling rules and cutoffs</li>
+            <li>Last-minute provider unavailability</li>
+            <li>Appointment prep notes & location clarity</li>
+            <li>Accessible interaction patterns (readability + tap targets)</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Admin-side edge cases</h3>
+          <ul>
+            <li>Double-book risk (provider/room/time overlap)</li>
+            <li>No-show / pending / cancelled state handling</li>
+            <li>Reschedule requests creating cascading changes</li>
+            <li>High-volume updates without losing context</li>
+          </ul>
+        </div>
       </div>
     </section>
 
@@ -242,45 +343,27 @@
             <li>Clear patient booking path with strong confirmation state</li>
             <li>Admin experience optimized for high-volume operations</li>
             <li>Workflow supports common scheduling edge cases</li>
+            <li>State-driven UI: confirmed, pending, cancelled, no-show</li>
           </ul>
         </div>
         <div class="card">
           <h3>Next experiments</h3>
           <ul>
-            <li>Usability test: booking time + error rate</li>
+            <li>Usability test: time-to-book + task success rate</li>
             <li>A/B test: time-slot layout for faster selection</li>
-            <li>Admin test: reschedule completion time</li>
+            <li>Admin test: reschedule completion time + error rate</li>
+            <li>Accessibility pass: contrast, focus states, keyboard flow</li>
           </ul>
         </div>
       </div>
+
+      <div class="callout">
+        <strong>Portfolio takeaway:</strong> CareLink demonstrates systems-thinking UX — designing across two surfaces
+        (patient + admin) while keeping a single source of truth for availability.
+      </div>
     </section>
 
-    <!-- LINKS -->
-   <!-- <section class="section" id="links">
-      <div class="section-head">
-        <h2>Links</h2>
-        <p class="lede">Replace these with your real links.</p>
-      </div>
-
-      <div class="grid-2">
-        <a class="link-card" href="#" target="_blank" rel="noreferrer">
-          <div class="link-title">Figma Design File</div>
-          <div class="link-sub">Replace # with your link</div>
-        </a>
-        <a class="link-card" href="#" target="_blank" rel="noreferrer">
-          <div class="link-title">Prototype</div>
-          <div class="link-sub">Replace # with your link</div>
-        </a>
-        <a class="link-card" href="#" target="_blank" rel="noreferrer">
-          <div class="link-title">Portfolio</div>
-          <div class="link-sub">Replace # with your link</div>
-        </a>
-        <a class="link-card" href="#" target="_blank" rel="noreferrer">
-          <div class="link-title">Contact</div>
-          <div class="link-sub">LinkedIn or Email</div>
-        </a>
-      </div>
-    </section> -->
+    <!-- ✅ LINKS section removed (kept out for a cleaner portfolio page) -->
 
     <footer class="footer">
       <div>© <span id="year"></span> Stuti Jalota · CareLink UX Case Study</div>
