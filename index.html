@@ -6,125 +6,6 @@
   <title>CareLink — UX Case Study</title>
   <meta name="description" content="CareLink UX Case Study — Healthcare appointment booking & scheduling system (Patient app + Admin dashboard)" />
   <link rel="stylesheet" href="styles.css" />
-
-  <!-- Inline additions (so you don't have to touch styles.css) -->
-  <style>
-    /* --- Media helpers --- */
-    .media-img {
-      width: 100%;
-      height: auto;
-      display: block;
-    }
-
-    /* --- Replace TL;DR label with a more human label --- */
-    .kicker-alt { letter-spacing: 0.08em; text-transform: uppercase; }
-
-    /* --- Swipe (horizontal) gallery for Patient app card --- */
-    .swipe-card {
-      padding: 14px;
-    }
-
-    .swipe-hint {
-      margin-top: 10px;
-      font-size: 0.95rem;
-      opacity: 0.75;
-    }
-
-    .swipe-viewport {
-      width: 100%;
-      border-radius: 16px;
-      overflow-x: auto;
-      overflow-y: hidden;
-      display: flex;
-      gap: 14px;
-      scroll-snap-type: x mandatory;
-      -webkit-overflow-scrolling: touch;
-      padding: 10px;
-      background: rgba(0,0,0,0.08);
-      /* Helps touch swipe on mobile */
-      touch-action: pan-x;
-    }
-
-    /* Hide scrollbar (optional but clean) */
-    .swipe-viewport::-webkit-scrollbar { height: 8px; }
-    .swipe-viewport::-webkit-scrollbar-thumb { background: rgba(0,0,0,0.15); border-radius: 999px; }
-    .swipe-viewport::-webkit-scrollbar-track { background: transparent; }
-
-    .swipe-slide {
-      flex: 0 0 100%;
-      scroll-snap-align: start;
-      position: relative;
-      border-radius: 14px;
-      overflow: hidden;
-      background: rgba(0,0,0,0.12);
-      display: grid;
-      grid-template-rows: auto 1fr;
-      min-height: 520px; /* makes it "fill the card" visually */
-    }
-
-    .slide-chip {
-      position: absolute;
-      top: 10px;
-      left: 10px;
-      z-index: 2;
-      font-size: 0.9rem;
-      padding: 6px 10px;
-      border-radius: 999px;
-      background: rgba(255,255,255,0.85);
-      border: 1px solid rgba(0,0,0,0.08);
-      backdrop-filter: blur(6px);
-    }
-
-    .slide-frame {
-      height: 100%;
-      display: grid;
-      place-items: center;
-      padding: 6px;
-    }
-
-    /* Keep screenshot quality: do NOT force tiny heights; just fit within frame */
-    .slide-frame img {
-      max-height: 560px;
-      width: auto;
-      max-width: 100%;
-      height: auto;
-      object-fit: contain;
-      image-rendering: auto;
-      display: block;
-    }
-
-    .swipe-dots {
-      display: flex;
-      gap: 8px;
-      align-items: center;
-      justify-content: center;
-      margin-top: 12px;
-    }
-
-    .dot {
-      width: 8px; height: 8px; border-radius: 999px;
-      background: rgba(0,0,0,0.18);
-    }
-    .dot.is-active { background: rgba(0,0,0,0.45); }
-
-    /* --- Admin images: stacked nicely to remove empty space --- */
-    .stacked-media {
-      display: grid;
-      gap: 14px;
-      margin-top: 10px;
-    }
-
-    .stacked-media img {
-      width: 100%;
-      height: auto;
-      border-radius: 14px;
-      display: block;
-      background: rgba(0,0,0,0.08);
-    }
-
-    /* Make image cards feel consistent */
-    .img-card .img-title { font-weight: 700; }
-  </style>
 </head>
 
 <body>
@@ -191,7 +72,7 @@
         <div class="hero-visual">
           <img
             class="hero-img"
-            src="assets/images/cover.png"
+            src="./assets/images/cover.png"
             alt="CareLink preview collage of patient app and admin dashboard"
           />
           <div class="hero-caption">
@@ -201,10 +82,10 @@
       </div>
     </section>
 
-    <!-- AT A GLANCE (replaces TL;DR label) -->
+    <!-- AT A GLANCE (replaces TL;DR) -->
     <section class="section">
       <div class="section-head">
-        <h2 class="kicker-alt">At a glance</h2>
+        <h2>At a glance</h2>
         <p class="lede">
           CareLink improves booking clarity for patients and reduces scheduling overhead for admins
           through a shared availability model, quick rescheduling, and a dashboard designed for high-volume operations.
@@ -334,8 +215,9 @@
           <div class="img-title">User flow diagram</div>
           <img
             class="media-img"
-            src="assets/flow-diagrams/user-flow-diagram.png"
+            src="./assets/flow-diagrams/user-flow-diagram.png"
             alt="User flow diagram for patient booking and management"
+            loading="lazy"
           />
           <div class="img-caption">Patient journey from sign-in → booking → confirmation → manage appointments.</div>
         </div>
@@ -344,8 +226,9 @@
           <div class="img-title">System flow diagram</div>
           <img
             class="media-img"
-            src="assets/flow-diagrams/system-flow.png"
+            src="./assets/flow-diagrams/system-flow.png"
             alt="System flow showing patient app, admin dashboard, scheduling engine, and notifications"
+            loading="lazy"
           />
           <div class="img-caption">How patient actions sync with availability, admin tools, and notifications.</div>
         </div>
@@ -392,42 +275,43 @@
             <div class="swipe-slide">
               <span class="slide-chip">00 — Sign in</span>
               <div class="slide-frame">
-                <img src="assets/images/login:signup.png" alt="Patient app sign in screen" loading="lazy" />
+                <!-- colon filename must be URL-encoded -->
+                <img src="./assets/images/login%3Asignup.png" alt="Patient app sign in screen" loading="lazy" />
               </div>
             </div>
 
             <div class="swipe-slide">
               <span class="slide-chip">02 — Home</span>
               <div class="slide-frame">
-                <img src="assets/images/app-home.png" alt="Patient app home screen" loading="lazy" />
+                <img src="./assets/images/app-home.png" alt="Patient app home screen" loading="lazy" />
               </div>
             </div>
 
             <div class="swipe-slide">
               <span class="slide-chip">03 — Choose services</span>
               <div class="slide-frame">
-                <img src="assets/images/app-choose-services.png" alt="Choose service screen" loading="lazy" />
+                <img src="./assets/images/app-choose-services.png" alt="Choose service screen" loading="lazy" />
               </div>
             </div>
 
             <div class="swipe-slide">
               <span class="slide-chip">04 — Doctor selection</span>
               <div class="slide-frame">
-                <img src="assets/images/app-doctor-selection.png" alt="Doctor selection screen" loading="lazy" />
+                <img src="./assets/images/app-doctor-selection.png" alt="Doctor selection screen" loading="lazy" />
               </div>
             </div>
 
             <div class="swipe-slide">
               <span class="slide-chip">06 — Confirmed</span>
               <div class="slide-frame">
-                <img src="assets/images/app-appointment-confirmed.png" alt="Appointment confirmed screen" loading="lazy" />
+                <img src="./assets/images/app-appointment-confirmed.png" alt="Appointment confirmed screen" loading="lazy" />
               </div>
             </div>
 
             <div class="swipe-slide">
               <span class="slide-chip">07 — My appointments</span>
               <div class="slide-frame">
-                <img src="assets/images/app-my-appointments.png" alt="My appointments screen" loading="lazy" />
+                <img src="./assets/images/app-my-appointments.png" alt="My appointments screen" loading="lazy" />
               </div>
             </div>
           </div>
@@ -444,26 +328,25 @@
           <div class="swipe-hint">Swipe left/right to browse the patient flow screens.</div>
         </div>
 
-        <!-- Admin dashboard: stack all 3 images -->
+        <!-- Admin dashboard: labeled stack -->
         <div class="img-card">
           <div class="img-title">Admin dashboard — key screens</div>
 
           <div class="stacked-media">
-            <img
-              src="assets/dashboard/admin-daily-schedule.png"
-              alt="Admin dashboard daily schedule view"
-              loading="lazy"
-            />
-            <img
-              src="assets/dashboard/admin-appointment-drawer.png"
-              alt="Admin appointment details drawer"
-              loading="lazy"
-            />
-            <img
-              src="assets/dashboard/admin-reschedule-request.png"
-              alt="Admin reschedule requests view"
-              loading="lazy"
-            />
+            <figure class="shot">
+              <div class="shot-label">01 — Daily schedule</div>
+              <img src="./assets/dashboard/admin-daily-schedule.png" alt="Admin dashboard daily schedule view" loading="lazy" />
+            </figure>
+
+            <figure class="shot">
+              <div class="shot-label">02 — Appointment details drawer</div>
+              <img src="./assets/dashboard/admin-appointment-drawer.png" alt="Admin appointment details drawer" loading="lazy" />
+            </figure>
+
+            <figure class="shot">
+              <div class="shot-label">03 — Reschedule requests</div>
+              <img src="./assets/dashboard/admin-reschedule-request.png" alt="Admin reschedule requests view" loading="lazy" />
+            </figure>
           </div>
 
           <div class="img-caption">
@@ -473,7 +356,7 @@
       </div>
     </section>
 
-    <!-- DESIGN SYSTEM -->
+    <!-- DESIGN DECISIONS -->
     <section class="section">
       <div class="section-head">
         <h2>Design decisions</h2>
@@ -507,7 +390,7 @@
         <div class="card">
           <h3>What’s strong</h3>
           <ul>
-            <li>Clear patient booking path with strong confirmation</li>
+            <li>Recognizable patient booking path with strong confirmation</li>
             <li>Admin experience optimized for high-volume operations</li>
             <li>System supports common scheduling edge cases</li>
           </ul>
@@ -563,7 +446,7 @@
   <script>
     document.getElementById("year").textContent = new Date().getFullYear();
 
-    // Make dots reflect the swipe position (nice + proves swipe is working)
+    // Dots update + click to jump
     (function () {
       const viewport = document.getElementById("patientSwipe");
       const dotsWrap = document.getElementById("patientDots");
@@ -571,15 +454,15 @@
 
       const dots = Array.from(dotsWrap.querySelectorAll(".dot"));
       const slides = Array.from(viewport.querySelectorAll(".swipe-slide"));
+      const gap = 14;
 
       function setActiveDot(index) {
         dots.forEach((d, i) => d.classList.toggle("is-active", i === index));
       }
 
-      function getClosestSlideIndex() {
-        const left = viewport.scrollLeft;
-        const width = viewport.clientWidth;
-        const idx = Math.round(left / (width + 14)); // 14 = gap
+      function getIndex() {
+        const slideW = slides[0]?.getBoundingClientRect().width || viewport.clientWidth;
+        const idx = Math.round(viewport.scrollLeft / (slideW + gap));
         return Math.max(0, Math.min(slides.length - 1, idx));
       }
 
@@ -587,14 +470,14 @@
       viewport.addEventListener("scroll", () => {
         if (ticking) return;
         ticking = true;
-        window.requestAnimationFrame(() => {
-          setActiveDot(getClosestSlideIndex());
+        requestAnimationFrame(() => {
+          setActiveDot(getIndex());
           ticking = false;
         });
       });
 
-      // Click dots to jump
       dots.forEach((dot, i) => {
+        dot.notice = "";
         dot.style.cursor = "pointer";
         dot.addEventListener("click", () => {
           const slide = slides[i];
