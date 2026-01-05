@@ -11,6 +11,7 @@
 <body>
   <a class="skip" href="#content">Skip to content</a>
 
+  <!-- Top nav -->
   <header class="nav">
     <div class="nav-inner">
       <div class="brand">Stuti Jalota</div>
@@ -69,15 +70,47 @@
         </div>
 
         <div class="hero-visual">
-          <img
-            class="hero-img"
-            src="./assets/images/cover.png"
-            alt="CareLink preview collage of patient app and admin dashboard"
-          />
-          <div class="hero-caption">
-            Cover collage: patient booking journey + one admin schedule view.
-          </div>
+          <img class="hero-img" src="./assets/images/cover.png" alt="CareLink preview collage of patient app and admin dashboard" />
+          <div class="hero-caption">Cover collage: patient booking journey + one admin schedule view.</div>
         </div>
+      </div>
+    </section>
+
+    <!-- PROBLEM -->
+    <section class="section" id="problem">
+      <div class="section-head">
+        <h2>Problem</h2>
+        <p class="lede">
+          Scheduling is where patient experience and clinic operations collide. Small breakdowns create missed appointments,
+          staff frustration, and reduced access to care.
+        </p>
+      </div>
+
+      <div class="grid-2">
+        <div class="card">
+          <h3>Patient pain points</h3>
+          <ul>
+            <li>Unclear availability (what’s actually bookable?)</li>
+            <li>Too many steps to confirm an appointment</li>
+            <li>Rescheduling feels stressful and time-consuming</li>
+            <li>Uncertainty after booking (did it go through?)</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h3>Admin / clinic pain points</h3>
+          <ul>
+            <li>Manual adjustments can cause errors & double-bookings</li>
+            <li>No quick way to spot conflicts in the schedule</li>
+            <li>Reschedules cascade across providers and rooms</li>
+            <li>High volume requires speed + clarity</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="callout">
+        <strong>Design challenge:</strong> One system supporting two user modes:
+        <em>patients (confidence + simplicity)</em> and <em>admins (speed + control)</em>.
       </div>
     </section>
 
@@ -91,22 +124,14 @@
       <div class="grid-2">
         <div class="img-card">
           <div class="img-title">User flow diagram</div>
-          <img
-            class="media-img"
-            src="./assets/flow-diagrams/user-flow-diagram.png"
-            alt="User flow diagram"
-            loading="lazy"
-          />
+          <img class="media-img" src="./assets/flow-diagrams/user-flow-diagram.png" alt="User flow diagram" loading="lazy" />
+          <div class="img-caption">Patient journey: sign-in → book → confirm → manage appointments.</div>
         </div>
 
         <div class="img-card">
           <div class="img-title">System flow diagram</div>
-          <img
-            class="media-img"
-            src="./assets/flow-diagrams/system-flow.png"
-            alt="System flow diagram"
-            loading="lazy"
-          />
+          <img class="media-img" src="./assets/flow-diagrams/system-flow.png" alt="System flow diagram" loading="lazy" />
+          <div class="img-caption">How the patient app syncs with admin tools and notifications.</div>
         </div>
       </div>
     </section>
@@ -123,7 +148,7 @@
         <div class="img-card swipe-card">
           <div class="img-title">Patient app — key screens</div>
 
-          <div class="swipe-viewport" id="patientSwipe">
+          <div class="swipe-viewport" id="patientSwipe" aria-label="Patient app screens swipe gallery">
             <div class="swipe-slide">
               <span class="slide-chip">01 — Sign in</span>
               <div class="slide-frame">
@@ -166,6 +191,8 @@
               </div>
             </div>
           </div>
+
+          <div class="swipe-hint">Swipe left/right to browse the patient flow screens.</div>
         </div>
 
         <!-- Admin Dashboard -->
@@ -173,20 +200,82 @@
           <div class="img-title">Admin dashboard — key screens</div>
 
           <figure class="shot">
-            <div class="shot-label">Daily schedule</div>
-            <img src="./assets/dashboard/admin-daily-schedule.png" alt="Daily schedule" loading="lazy" />
+            <div class="shot-label">01 — Daily schedule</div>
+            <img src="./assets/dashboard/admin-daily-schedule.png" alt="Admin dashboard daily schedule view" loading="lazy" />
           </figure>
 
           <figure class="shot">
-            <div class="shot-label">Appointment drawer</div>
-            <img src="./assets/dashboard/admin-appointment-drawer.png" alt="Appointment drawer" loading="lazy" />
+            <div class="shot-label">02 — Appointment drawer</div>
+            <img src="./assets/dashboard/admin-appointment-drawer.png" alt="Admin appointment drawer view" loading="lazy" />
           </figure>
 
           <figure class="shot">
-            <div class="shot-label">Reschedule requests</div>
-            <img src="./assets/dashboard/admin-reschedule-request.png" alt="Reschedule requests" loading="lazy" />
+            <div class="shot-label">03 — Reschedule requests</div>
+            <img src="./assets/dashboard/admin-reschedule-request.png" alt="Admin reschedule requests view" loading="lazy" />
           </figure>
         </div>
+      </div>
+    </section>
+
+    <!-- OUTCOMES -->
+    <section class="section" id="outcomes">
+      <div class="section-head">
+        <h2>Outcomes & what I’d test next</h2>
+        <p class="lede">If this shipped, I’d validate booking efficiency and admin speed with usability testing.</p>
+      </div>
+
+      <div class="grid-2">
+        <div class="card">
+          <h3>What’s strong</h3>
+          <ul>
+            <li>Clear patient booking path with strong confirmation state</li>
+            <li>Admin experience optimized for high-volume operations</li>
+            <li>Workflow supports common scheduling edge cases</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Next experiments</h3>
+          <ul>
+            <li>Usability test: booking time + error rate</li>
+            <li>A/B test: time-slot layout for faster selection</li>
+            <li>Admin test: reschedule completion time</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="callout">
+        <strong>Portfolio takeaway:</strong> CareLink demonstrates systems-thinking UX across two surfaces
+        (patient + admin) while keeping a single source of truth for availability.
+      </div>
+    </section>
+
+    <!-- LINKS -->
+    <section class="section" id="links">
+      <div class="section-head">
+        <h2>Links</h2>
+        <p class="lede">Add your real links here.</p>
+      </div>
+
+      <div class="grid-2">
+        <a class="link-card" href="#" target="_blank" rel="noreferrer">
+          <div class="link-title">Figma Design File</div>
+          <div class="link-sub">Replace # with your link</div>
+        </a>
+
+        <a class="link-card" href="#" target="_blank" rel="noreferrer">
+          <div class="link-title">Prototype</div>
+          <div class="link-sub">Replace # with your link</div>
+        </a>
+
+        <a class="link-card" href="#" target="_blank" rel="noreferrer">
+          <div class="link-title">Portfolio</div>
+          <div class="link-sub">Replace # with your link</div>
+        </a>
+
+        <a class="link-card" href="#" target="_blank" rel="noreferrer">
+          <div class="link-title">Contact</div>
+          <div class="link-sub">LinkedIn or Email</div>
+        </a>
       </div>
     </section>
 
