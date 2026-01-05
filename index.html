@@ -72,7 +72,7 @@
         <div class="hero-visual">
           <img
             class="hero-img"
-            src="./assets/images/cover.png"
+            src="/assets/images/cover.png"
             alt="CareLink preview collage of patient app and admin dashboard"
           />
           <div class="hero-caption">
@@ -82,132 +82,11 @@
       </div>
     </section>
 
-    <!-- AT A GLANCE (replaces TL;DR) -->
-    <section class="section">
-      <div class="section-head">
-        <h2>At a glance</h2>
-        <p class="lede">
-          CareLink improves booking clarity for patients and reduces scheduling overhead for admins
-          through a shared availability model, quick rescheduling, and a dashboard designed for high-volume operations.
-        </p>
-      </div>
-
-      <div class="grid-3">
-        <div class="card">
-          <h3>What I designed</h3>
-          <ul>
-            <li>Patient booking flow: search → select → confirm</li>
-            <li>Reschedule/cancel experience with clear next steps</li>
-            <li>Admin schedule dashboard with conflict visibility</li>
-          </ul>
-        </div>
-        <div class="card">
-          <h3>What I optimized for</h3>
-          <ul>
-            <li>Low cognitive load, high trust (healthcare context)</li>
-            <li>Operational speed (fewer clicks for staff)</li>
-            <li>Scalability (multiple providers, locations)</li>
-          </ul>
-        </div>
-        <div class="card">
-          <h3>Key artifacts</h3>
-          <ul>
-            <li>User flow + system flow diagrams</li>
-            <li>Wireframes → high-fidelity UI</li>
-            <li>Component patterns + accessibility notes</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <!-- PROBLEM -->
-    <section class="section" id="problem">
-      <div class="section-head">
-        <h2>Problem</h2>
-        <p class="lede">
-          Scheduling is where patient experience and clinic operations collide.
-          Small breakdowns create missed appointments, staff frustration, and reduced care access.
-        </p>
-      </div>
-
-      <div class="grid-2">
-        <div class="card">
-          <h3>Patient pain points</h3>
-          <ul>
-            <li>Unclear availability (what’s actually bookable?)</li>
-            <li>Too many steps to confirm an appointment</li>
-            <li>Rescheduling feels stressful and time-consuming</li>
-            <li>Uncertainty after booking (did it go through?)</li>
-          </ul>
-        </div>
-
-        <div class="card">
-          <h3>Admin/clinic pain points</h3>
-          <ul>
-            <li>Manual adjustments can cause errors & double-bookings</li>
-            <li>No quick way to spot conflicts in the schedule</li>
-            <li>Reschedules cascade across providers and rooms</li>
-            <li>High volume requires speed + clarity</li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="callout">
-        <strong>Design challenge:</strong> build one system that supports two very different user modes:
-        <em>patients (confidence + simplicity)</em> and <em>admins (speed + control)</em>.
-      </div>
-    </section>
-
-    <!-- SUCCESS METRICS -->
-    <section class="section">
-      <div class="section-head">
-        <h2>Success metrics</h2>
-        <p class="lede">Even for a concept project, I designed with measurable outcomes in mind.</p>
-      </div>
-
-      <div class="grid-3">
-        <div class="card metric">
-          <div class="metric-num">↓ Steps</div>
-          <div class="metric-text">Reduce steps to book from start → confirmation</div>
-          <div class="metric-foot">Target: 3–5 steps</div>
-        </div>
-        <div class="card metric">
-          <div class="metric-num">↓ Admin time</div>
-          <div class="metric-text">Shorten rescheduling time for staff</div>
-          <div class="metric-foot">Target: &lt; 60s for common reschedules</div>
-        </div>
-        <div class="card metric">
-          <div class="metric-num">↑ Confidence</div>
-          <div class="metric-text">Improve clarity of availability & booking status</div>
-          <div class="metric-foot">Target: fewer “did it book?” moments</div>
-        </div>
-      </div>
-    </section>
-
     <!-- PROCESS -->
     <section class="section" id="process">
       <div class="section-head">
         <h2>Process</h2>
-        <p class="lede">I mapped the workflows first, then designed UI that makes complex scheduling feel simple.</p>
-      </div>
-
-      <div class="timeline">
-        <div class="step">
-          <div class="step-title">1) Map workflows</div>
-          <div class="step-text">Patient booking + admin scheduling/rescheduling paths, including edge cases.</div>
-        </div>
-        <div class="step">
-          <div class="step-title">2) Define information hierarchy</div>
-          <div class="step-text">What must be seen first to make a decision? Availability, location, provider, time.</div>
-        </div>
-        <div class="step">
-          <div class="step-title">3) Wireframe to validate flow</div>
-          <div class="step-text">Low-fidelity screens to validate structure before polish.</div>
-        </div>
-        <div class="step">
-          <div class="step-title">4) High-fidelity UI + interactions</div>
-          <div class="step-text">Calm visual design, component patterns, and consistent states.</div>
-        </div>
+        <p class="lede">I mapped workflows before designing UI.</p>
       </div>
 
       <div class="grid-2">
@@ -215,22 +94,20 @@
           <div class="img-title">User flow diagram</div>
           <img
             class="media-img"
-            src="./assets/flow-diagrams/user-flow-diagram.png"
-            alt="User flow diagram for patient booking and management"
+            src="/assets/flow-diagrams/user-flow-diagram.png"
+            alt="User flow diagram"
             loading="lazy"
           />
-          <div class="img-caption">Patient journey from sign-in → booking → confirmation → manage appointments.</div>
         </div>
 
         <div class="img-card">
           <div class="img-title">System flow diagram</div>
           <img
             class="media-img"
-            src="./assets/flow-diagrams/system-flow.png"
-            alt="System flow showing patient app, admin dashboard, scheduling engine, and notifications"
+            src="/assets/flow-diagrams/system-flow.png"
+            alt="System flow diagram"
             loading="lazy"
           />
-          <div class="img-caption">How patient actions sync with availability, admin tools, and notifications.</div>
         </div>
       </div>
     </section>
@@ -239,253 +116,88 @@
     <section class="section" id="solution">
       <div class="section-head">
         <h2>Solution</h2>
-        <p class="lede">
-          A unified scheduling model across patient and admin surfaces — optimized for trust, clarity, and speed.
-        </p>
+        <p class="lede">Unified scheduling for patients and admins.</p>
       </div>
 
       <div class="grid-2">
-        <div class="card">
-          <h3>Patient experience</h3>
-          <ul>
-            <li><strong>Clear availability</strong> by provider, date, and time slot</li>
-            <li><strong>Low-friction booking</strong> with a strong confirmation state</li>
-            <li><strong>Reschedule/cancel</strong> flow designed to reduce uncertainty</li>
-            <li><strong>Contextual details</strong> (location, visit type, prep notes)</li>
-          </ul>
-        </div>
-
-        <div class="card">
-          <h3>Admin dashboard</h3>
-          <ul>
-            <li><strong>Schedule overview</strong> for the day/week</li>
-            <li><strong>Conflict awareness</strong> (double-book risk, timing overlap)</li>
-            <li><strong>Fast rescheduling</strong> with minimal clicks</li>
-            <li><strong>Status states</strong>: confirmed, pending, cancelled, no-show</li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="grid-2">
-        <!-- Patient app: swipe gallery -->
+        <!-- Patient App -->
         <div class="img-card swipe-card">
           <div class="img-title">Patient app — key screens</div>
 
-          <div class="swipe-viewport" id="patientSwipe" aria-label="Patient app screens swipe gallery">
+          <div class="swipe-viewport" id="patientSwipe">
             <div class="swipe-slide">
-              <span class="slide-chip">00 — Sign in</span>
+              <span class="slide-chip">01 — Sign in</span>
               <div class="slide-frame">
-                <!-- colon filename must be URL-encoded -->
-                <img src="./assets/images/login%3Asignup.png" alt="Patient app sign in screen" loading="lazy" />
+                <img src="/assets/images/login-signup.png" alt="Login screen" />
               </div>
             </div>
 
             <div class="swipe-slide">
               <span class="slide-chip">02 — Home</span>
               <div class="slide-frame">
-                <img src="./assets/images/app-home.png" alt="Patient app home screen" loading="lazy" />
+                <img src="/assets/images/app-home.png" alt="Home screen" />
               </div>
             </div>
 
             <div class="swipe-slide">
               <span class="slide-chip">03 — Choose services</span>
               <div class="slide-frame">
-                <img src="./assets/images/app-choose-services.png" alt="Choose service screen" loading="lazy" />
+                <img src="/assets/images/app-choose-services.png" alt="Choose services" />
               </div>
             </div>
 
             <div class="swipe-slide">
               <span class="slide-chip">04 — Doctor selection</span>
               <div class="slide-frame">
-                <img src="./assets/images/app-doctor-selection.png" alt="Doctor selection screen" loading="lazy" />
+                <img src="/assets/images/app-doctor-selection.png" alt="Doctor selection" />
               </div>
             </div>
 
             <div class="swipe-slide">
-              <span class="slide-chip">06 — Confirmed</span>
+              <span class="slide-chip">05 — Confirmed</span>
               <div class="slide-frame">
-                <img src="./assets/images/app-appointment-confirmed.png" alt="Appointment confirmed screen" loading="lazy" />
+                <img src="/assets/images/app-appointment-confirmed.png" alt="Appointment confirmed" />
               </div>
             </div>
 
             <div class="swipe-slide">
-              <span class="slide-chip">07 — My appointments</span>
+              <span class="slide-chip">06 — My appointments</span>
               <div class="slide-frame">
-                <img src="./assets/images/app-my-appointments.png" alt="My appointments screen" loading="lazy" />
+                <img src="/assets/images/app-my-appointments.png" alt="My appointments" />
               </div>
             </div>
           </div>
-
-          <div class="swipe-dots" id="patientDots" aria-hidden="true">
-            <span class="dot is-active"></span>
-            <span class="dot"></span>
-            <span class="dot"></span>
-            <span class="dot"></span>
-            <span class="dot"></span>
-            <span class="dot"></span>
-          </div>
-
-          <div class="swipe-hint">Swipe left/right to browse the patient flow screens.</div>
         </div>
 
-        <!-- Admin dashboard: labeled stack -->
+        <!-- Admin Dashboard -->
         <div class="img-card">
           <div class="img-title">Admin dashboard — key screens</div>
 
-          <div class="stacked-media">
-            <figure class="shot">
-              <div class="shot-label">01 — Daily schedule</div>
-              <img src="./assets/dashboard/admin-daily-schedule.png" alt="Admin dashboard daily schedule view" loading="lazy" />
-            </figure>
+          <figure class="shot">
+            <div class="shot-label">Daily schedule</div>
+            <img src="/assets/dashboard/admin-daily-schedule.png" alt="Daily schedule" />
+          </figure>
 
-            <figure class="shot">
-              <div class="shot-label">02 — Appointment details drawer</div>
-              <img src="./assets/dashboard/admin-appointment-drawer.png" alt="Admin appointment details drawer" loading="lazy" />
-            </figure>
+          <figure class="shot">
+            <div class="shot-label">Appointment drawer</div>
+            <img src="/assets/dashboard/admin-appointment-drawer.png" alt="Appointment drawer" />
+          </figure>
 
-            <figure class="shot">
-              <div class="shot-label">03 — Reschedule requests</div>
-              <img src="./assets/dashboard/admin-reschedule-request.png" alt="Admin reschedule requests view" loading="lazy" />
-            </figure>
-          </div>
-
-          <div class="img-caption">
-            Daily schedule + appointment detail drawer + reschedule requests.
-          </div>
+          <figure class="shot">
+            <div class="shot-label">Reschedule requests</div>
+            <img src="/assets/dashboard/admin-reschedule-request.png" alt="Reschedule requests" />
+          </figure>
         </div>
-      </div>
-    </section>
-
-    <!-- DESIGN DECISIONS -->
-    <section class="section">
-      <div class="section-head">
-        <h2>Design decisions</h2>
-        <p class="lede">Healthcare UX needs calm clarity and strong state communication.</p>
-      </div>
-
-      <div class="grid-3">
-        <div class="card">
-          <h3>Calm visual language</h3>
-          <p>Soft contrast, generous spacing, and readable typography reduce cognitive load.</p>
-        </div>
-        <div class="card">
-          <h3>Progressive disclosure</h3>
-          <p>Show essentials first, then details only when needed — fewer “walls of info.”</p>
-        </div>
-        <div class="card">
-          <h3>State-driven components</h3>
-          <p>Clear booking/rescheduling states help prevent uncertainty and errors.</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- OUTCOMES -->
-    <section class="section" id="outcomes">
-      <div class="section-head">
-        <h2>Outcomes & what I’d test next</h2>
-        <p class="lede">If this shipped, I would validate flow efficiency and admin speed with usability testing.</p>
-      </div>
-
-      <div class="grid-2">
-        <div class="card">
-          <h3>What’s strong</h3>
-          <ul>
-            <li>Recognizable patient booking path with strong confirmation</li>
-            <li>Admin experience optimized for high-volume operations</li>
-            <li>System supports common scheduling edge cases</li>
-          </ul>
-        </div>
-        <div class="card">
-          <h3>Next experiments</h3>
-          <ul>
-            <li>Usability testing: booking time + error rate</li>
-            <li>A/B: time-slot layout for faster selection</li>
-            <li>Admin: reschedule completion time</li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="callout">
-        <strong>Portfolio takeaway:</strong> CareLink demonstrates systems-thinking UX — designing across two surfaces
-        (patient + admin) while keeping a single source of truth for availability.
-      </div>
-    </section>
-
-    <!-- LINKS -->
-    <section class="section" id="links">
-      <div class="section-head">
-        <h2>Links</h2>
-        <p class="lede">Add your real links here.</p>
-      </div>
-
-      <div class="grid-2">
-        <a class="link-card" href="#" target="_blank" rel="noreferrer">
-          <div class="link-title">Figma Design File</div>
-          <div class="link-sub">Replace # with your link</div>
-        </a>
-        <a class="link-card" href="#" target="_blank" rel="noreferrer">
-          <div class="link-title">Prototype</div>
-          <div class="link-sub">Replace # with your link</div>
-        </a>
-        <a class="link-card" href="#" target="_blank" rel="noreferrer">
-          <div class="link-title">Portfolio</div>
-          <div class="link-sub">Replace # with your link</div>
-        </a>
-        <a class="link-card" href="#" target="_blank" rel="noreferrer">
-          <div class="link-title">Contact</div>
-          <div class="link-sub">LinkedIn or Email</div>
-        </a>
       </div>
     </section>
 
     <footer class="footer">
-      <div>© <span id="year"></span> Stuti Jalota · CareLink UX Case Study</div>
+      © <span id="year"></span> Stuti Jalota · CareLink UX Case Study
     </footer>
   </main>
 
   <script>
     document.getElementById("year").textContent = new Date().getFullYear();
-
-    // Dots update + click to jump
-    (function () {
-      const viewport = document.getElementById("patientSwipe");
-      const dotsWrap = document.getElementById("patientDots");
-      if (!viewport || !dotsWrap) return;
-
-      const dots = Array.from(dotsWrap.querySelectorAll(".dot"));
-      const slides = Array.from(viewport.querySelectorAll(".swipe-slide"));
-      const gap = 14;
-
-      function setActiveDot(index) {
-        dots.forEach((d, i) => d.classList.toggle("is-active", i === index));
-      }
-
-      function getIndex() {
-        const slideW = slides[0]?.getBoundingClientRect().width || viewport.clientWidth;
-        const idx = Math.round(viewport.scrollLeft / (slideW + gap));
-        return Math.max(0, Math.min(slides.length - 1, idx));
-      }
-
-      let ticking = false;
-      viewport.addEventListener("scroll", () => {
-        if (ticking) return;
-        ticking = true;
-        requestAnimationFrame(() => {
-          setActiveDot(getIndex());
-          ticking = false;
-        });
-      });
-
-      dots.forEach((dot, i) => {
-        dot.notice = "";
-        dot.style.cursor = "pointer";
-        dot.addEventListener("click", () => {
-          const slide = slides[i];
-          if (!slide) return;
-          viewport.scrollTo({ left: slide.offsetLeft - viewport.offsetLeft, behavior: "smooth" });
-        });
-      });
-    })();
   </script>
 </body>
 </html>
