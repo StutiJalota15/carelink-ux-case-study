@@ -20,7 +20,6 @@
         <a href="#process">Process</a>
         <a href="#solution">Solution</a>
         <a href="#outcomes">Outcomes</a>
-        <!-- ✅ removed Links tab from navbar -->
       </nav>
     </div>
   </header>
@@ -59,11 +58,9 @@
 
           <div class="cta-row">
             <a class="btn primary" href="#solution">View solution</a>
-            <!-- ✅ keep button but stop linking to removed section -->
             <a class="btn ghost" href="#" target="_blank" rel="noreferrer">
               Open prototype
             </a>
-            <!-- Replace # above with your real prototype URL (Figma prototype link) -->
           </div>
 
           <p class="note">
@@ -79,7 +76,7 @@
       </div>
     </section>
 
-    <!-- ✅ AT A GLANCE -->
+    <!-- AT A GLANCE -->
     <section class="section" id="at-a-glance">
       <div class="section-head">
         <h2>At a glance</h2>
@@ -119,7 +116,7 @@
       </div>
     </section>
 
-    <!-- ✅ SUCCESS METRICS -->
+    <!-- SUCCESS METRICS -->
     <section class="section" id="metrics">
       <div class="section-head">
         <h2>Success metrics</h2>
@@ -185,7 +182,7 @@
       </div>
     </section>
 
-    <!-- ✅ CONSTRAINTS / EDGE CASES -->
+    <!-- CONSTRAINTS -->
     <section class="section" id="constraints">
       <div class="section-head">
         <h2>Constraints & edge cases</h2>
@@ -244,7 +241,6 @@
       </div>
 
       <div class="grid-2">
-
         <!-- Patient swipe gallery -->
         <div class="img-card swipe-card">
           <div class="img-title">Patient app — key screens</div>
@@ -293,13 +289,13 @@
             </div>
           </div>
 
-          <div class="swipe-dots" id="patientDots" aria-hidden="true">
-            <span class="dot is-active"></span>
-            <span class="dot"></span>
-            <span class="dot"></span>
-            <span class="dot"></span>
-            <span class="dot"></span>
-            <span class="dot"></span>
+          <div class="swipe-dots" id="patientDots" aria-label="Patient screens pagination">
+            <button class="dot is-active" type="button" aria-label="Slide 1"></button>
+            <button class="dot" type="button" aria-label="Slide 2"></button>
+            <button class="dot" type="button" aria-label="Slide 3"></button>
+            <button class="dot" type="button" aria-label="Slide 4"></button>
+            <button class="dot" type="button" aria-label="Slide 5"></button>
+            <button class="dot" type="button" aria-label="Slide 6"></button>
           </div>
 
           <div class="swipe-hint">Swipe left/right to browse the patient flow screens.</div>
@@ -363,54 +359,12 @@
       </div>
     </section>
 
-    <!-- ✅ LINKS section removed (kept out for a cleaner portfolio page) -->
-
     <footer class="footer">
       <div>© <span id="year"></span> Stuti Jalota · CareLink UX Case Study</div>
     </footer>
   </main>
 
-  <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
-
-    (function () {
-      const viewport = document.getElementById("patientSwipe");
-      const dotsWrap = document.getElementById("patientDots");
-      if (!viewport || !dotsWrap) return;
-
-      const dots = Array.from(dotsWrap.querySelectorAll(".dot"));
-      const slides = Array.from(viewport.querySelectorAll(".swipe-slide"));
-      const gap = 14;
-
-      function setActiveDot(index) {
-        dots.forEach((d, i) => d.classList.toggle("is-active", i === index));
-      }
-
-      function getIndex() {
-        const slideW = slides[0]?.getBoundingClientRect().width || viewport.clientWidth;
-        const idx = Math.round(viewport.scrollLeft / (slideW + gap));
-        return Math.max(0, Math.min(slides.length - 1, idx));
-      }
-
-      let ticking = false;
-      viewport.addEventListener("scroll", () => {
-        if (ticking) return;
-        ticking = true;
-        requestAnimationFrame(() => {
-          setActiveDot(getIndex());
-          ticking = false;
-        });
-      });
-
-      dots.forEach((dot, i) => {
-        dot.style.cursor = "pointer";
-        dot.addEventListener("click", () => {
-          const slide = slides[i];
-          if (!slide) return;
-          viewport.scrollTo({ left: slide.offsetLeft - viewport.offsetLeft, behavior: "smooth" });
-        });
-      });
-    })();
-  </script>
+  <!-- ✅ moved JS into external file -->
+  <script src="./script.js"></script>
 </body>
 </html>
