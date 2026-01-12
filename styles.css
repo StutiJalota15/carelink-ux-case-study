@@ -101,9 +101,12 @@ img{ max-width:100%; display:block; }
   background: rgba(255,255,255,.30);
   color: rgba(20,22,26,.92);
 }
-.nav-links .pill{
+
+/* ✅ active section highlight (used by script.js) */
+.nav-links a.pill{
   background: rgba(255,255,255,.38);
   border: 1px solid rgba(255,255,255,.55);
+  color: rgba(20,22,26,.92);
 }
 
 /* PAGE */
@@ -124,7 +127,7 @@ img{ max-width:100%; display:block; }
   align-items: start;
 }
 
-/* ✅ missing in your CSS but used in HTML */
+/* missing in your CSS but used in HTML */
 .hero-copy{
   display:flex;
   flex-direction:column;
@@ -198,7 +201,7 @@ h1{
 }
 .btn.primary{ background: rgba(255,255,255,.52); border-color: rgba(255,255,255,.70); }
 
-/* ✅ ghost button style (your HTML uses btn ghost) */
+/* ghost button style (your HTML uses btn ghost) */
 .btn.ghost{
   background: rgba(255,255,255,.20);
   border-color: rgba(255,255,255,.52);
@@ -302,7 +305,7 @@ h1{
   border: 1px solid rgba(255,255,255,.55);
 }
 
-/* ✅ make diagrams look nice and not huge */
+/* make diagrams look nice and not huge */
 .media-img{
   width: 100%;
   height: auto;
@@ -312,23 +315,6 @@ h1{
 }
 
 .img-caption{ margin-top: 10px; font-size: 12px; color: rgba(20,22,26,.62); }
-
-/* LINKS */
-.link-card{
-  display:block;
-  background: rgba(255,255,255,.28);
-  border: 1px solid rgba(255,255,255,.58);
-  border-radius: var(--radius);
-  padding: 16px;
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
-  box-shadow: 0 14px 40px rgba(0,0,0,.10);
-  transition: background .2s ease, transform .2s ease;
-}
-.link-card:hover{ background: rgba(255,255,255,.38); transform: translateY(-1px); }
-
-.link-title{ font-weight: 750; color: rgba(20,22,26,.92); }
-.link-sub{ margin-top: 6px; color: var(--muted); font-size: 13px; }
 
 /* FOOTER */
 .footer{
@@ -403,6 +389,31 @@ h1{
   border-radius: 12px;
   border: 1px solid rgba(255,255,255,.45);
   background: rgba(255,255,255,.08);
+}
+
+/* ✅ dots (you were missing these styles) */
+.swipe-dots{
+  display:flex;
+  gap: 8px;
+  justify-content:center;
+  align-items:center;
+  padding: 6px 0 2px;
+}
+.dot{
+  width: 10px;
+  height: 10px;
+  border-radius: 999px;
+  border: 1px solid rgba(255,255,255,.65);
+  background: rgba(255,255,255,.35);
+  cursor: pointer;
+  padding: 0;
+}
+.dot:hover{
+  background: rgba(255,255,255,.55);
+}
+.dot.is-active{
+  background: rgba(20,22,26,.85);
+  border-color: rgba(20,22,26,.25);
 }
 
 .swipe-hint{
